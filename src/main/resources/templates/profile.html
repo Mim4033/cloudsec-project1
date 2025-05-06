@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BTS V - Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .profile-container img {
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 600px;
+            margin: 10px auto;
+        }
+
+        .quote {
+            font-style: italic;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #3366cc;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+You Are loged in as Jannatul <span th:text="${user}"></span>
+<div class="profile-container">
+    <img src="https://i.pinimg.com/564x/5c/c6/e0/5cc6e005e7c50334ccfcd92688f328d6.jpg" alt="BTS V">
+    <h1>Kim Taehyung (V)</h1>
+    <p>V is a vocalist and visual of BTS, admired for his deep voice, striking visuals, and artistic soul. Outside of music, he's known for his love of photography, fashion, and expressive personality.</p>
+    <p class="quote">🎤 "Don't be trapped in someone else's dream."</p>
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/thv/" target="_blank">Instagram</a>
+        <a href="https://www.weverse.io/bts/artist/1" target="_blank">Weverse</a>
+        <a href="mailto:v@bts.com">Email</a>
+    </div>
+</div>
+</body>
+</html>

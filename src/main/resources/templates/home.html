@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jannat Anime</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fefefe;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        #emoji {
+            display: inline-block;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.5s ease;
+            margin-left: 10px;
+        }
+
+        #emoji.show {
+            opacity: 1;
+            transform: scale(1);
+            animation: bounce 1s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .anime-gif {
+            width: 300px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            animation: wiggle 2s infinite;
+        }
+
+        @keyframes wiggle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(1.5deg); }
+            50% { transform: rotate(-1.5deg); }
+            75% { transform: rotate(1.5deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Jannat Anime <span id="emoji">😉</span></h1>
+
+    <!-- Funny Animated Anime GIF -->
+    <img class="anime-gif" src="https://media.giphy.com/media/pbYnGNKO6dht1fITxJ/giphy.gif" alt="Skater Cat">
+
+    <!-- Dynamic User Name -->
+    <h2 th:text="${user}"></h2>
+
+    <!-- List of Singers -->
+    <div th:each="oneSinger : ${singer}">
+        <h2 th:text="${oneSinger.getName()}"></h2>
+        <p th:text="${oneSinger.getAge()}"></p>
+    </div>
+</div>
+
+<!-- Emoji Animation Script -->
+<script>
+    window.onload = function () {
+        const emoji = document.getElementById("emoji");
+        setTimeout(() => {
+            emoji.classList.add("show");
+        }, 500);
+    };
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
